@@ -22,6 +22,6 @@ class Item
   end
 end
 
-date = Item.new(Date.parse('2016-2-3'), archived: true)
-puts date.can_be_archived?
-puts date.mo
+# date = Item.new(Date.parse('2016-2-3'), archived: true)
+# puts date.can_be_archived?
+# puts date.mo
