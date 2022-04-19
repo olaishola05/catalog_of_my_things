@@ -2,7 +2,7 @@ require_relative '../book'
 
 describe Book do
   context '#initialize Book and test methods' do
-    book = Book.new('Macmillian', 'Excellent')
+    book = Book.new(Date.parse('2016-2-3'), 'Macmillian', 'Excellent')
 
     it 'should check the instance of book' do
       expect(book).to be_an_instance_of Book
@@ -14,7 +14,7 @@ describe Book do
     end
 
     it 'should return false if book cannot be archived' do
-      book = Book.new('Macmillian', 'bad')
+      book = Book.new(Date.parse('2016-2-3'), 'Macmillian', 'bad')
       is_archived = book.can_be_archived?
       expect(is_archived).to eql(true)
     end
