@@ -3,9 +3,8 @@ require_relative '../item'
 
 describe Label do
   context '#initialize Label and test methods' do
-
     before(:each) do
-        @label = Label.new('Book Title', 'Yellow')
+      @label = Label.new('Book Title', 'Yellow', Date.parse('2000-2-3'), archived: true)
     end
 
     it 'should return true if label is an instance of Label' do

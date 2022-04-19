@@ -5,29 +5,18 @@ describe Book do
     book = Book.new('Macmillian', 'Excellent')
 
     it 'should check the instance of book' do
-      is_book = book.is_instance_of?(Book)
-      expect(is_book).to be true
+      expect(book).to be_an_instance_of Book
     end
-    
+
     it 'should return true if book can be archived' do
-      is_archived = book.can_be_archived?
-      expect(is_archived).to be true
+      not_archived = book.can_be_archived?
+      expect(not_archived).to eql(false)
     end
 
     it 'should return false if book cannot be archived' do
-      not_archived = book.can_be_archived?
-      expect(not_archived).to be false
+      book = Book.new('Macmillian', 'bad')
+      is_archived = book.can_be_archived?
+      expect(is_archived).to eql(true)
     end
-
-
-    # it 'should return true if book can be move to archive' do
-    #   book = book.move_to_archive
-    #   expect(book).to be true
-    # end
-
-    # it 'should return nil if book cannot be move to archive' do
-    #   book = book.move_to_archive
-    #   expect(book).to be nil
-    # end
   end
 end
