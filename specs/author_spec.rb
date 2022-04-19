@@ -1,5 +1,6 @@
 require '../author'
 require '../game'
+
 describe Author do
   context 'before each test in the game class' do
     before(:each) do

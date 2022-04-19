@@ -3,7 +3,7 @@ require '../game'
 describe Game do
   context 'before each test in the game class' do
     before(:each) do
-      @game = Game.new('2001-02-03', true, 5, '2001-02-03')
+      @game = Game.new('2001-02-03', true, 5, '2007-02-03')
     end
     describe '#new' do
       it 'should take 3  parameters and returns an author object' do
@@ -15,8 +15,8 @@ describe Game do
         expect(@game.multiplayer).to eql(5)
       end
 
-      it 'should add game to author' do
-        expect(@game.can_be_archived?).to eql(true)
+      it 'can archive game' do
+        expect(@game.can_be_archived?).to eql(false)
       end
     end
   end

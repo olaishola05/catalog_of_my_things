@@ -13,3 +13,8 @@ class Author
     item.author = self
   end
 end
+
+author = Author.new('join', 'kim');
+
+puts author.id
+
