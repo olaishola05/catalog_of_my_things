@@ -4,7 +4,7 @@ module BookList
 
     books.each_with_index do |book, index|
       puts "#{index}: [Book] Publish Date: #{book.publish_date} Publisher: \"#{book.publisher}\"
-             Cover: #{book.cover_string}"
+             Cover: #{book.cover_state}"
     end
     puts
   end

@@ -3,7 +3,7 @@ def read_books
     file = File.read('./data/book.json')
     books = JSON.parse(file)
     books.map do |book|
-      Book.new(book['publish_date'], book['publisher'], book['cover_string'])
+      Book.new(book['publish_date'], book['publisher'], book['cover_state'])
     end
   else
     []

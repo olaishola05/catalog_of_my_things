@@ -1,7 +1,7 @@
 def add_books
   file = File.open('./data/book.json', 'w')
   books = @books.map do |book|
-    { title: book.title, cover: book.cover_string }
+    { title: book.title, cover: book.cover_state }
   end
   file.puts(JSON.pretty_generate(books))
 end

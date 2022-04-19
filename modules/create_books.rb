@@ -1,6 +1,6 @@
 module CreateBook
-  def create_book(publish_date, publisher, cover_string)
-    @books.push(Book.new(publish_date, publisher, cover_string))
+  def create_book(publish_date, publisher, cover_state)
+    @books.push(Book.new(publish_date, publisher, cover_state))
   end
 
   def create_label(title, color)
@@ -14,8 +14,8 @@ module CreateBook
     print 'Enter Book Publisher: '
     publisher = gets.chomp
     print 'Enter Cover String: '
-    cover_string = gets.chomp
-    create_book(publish_date, publisher, cover_string)
+    cover_state = gets.chomp
+    create_book(publish_date, publisher, cover_state)
     puts 'Book created successfully.'
     add_books
   end
