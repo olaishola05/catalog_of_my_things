@@ -25,4 +25,3 @@ class Item
     can_be_archived? ? @archived = true : puts('Item cannot be archived')
   end
 end
-

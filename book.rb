@@ -15,4 +15,3 @@ class Book < Item
     super || @cover_string == 'bad'
   end
 end
-
