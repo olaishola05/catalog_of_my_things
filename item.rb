@@ -17,11 +17,11 @@ class Item
     Date.today.year - @publish_date.year > 10
   end
 
+  def add_label(label)
+    @label = label
+  end
+
   def move_to_archive
     can_be_archived? ? @archived = true : puts('Item cannot be archived')
   end
 end
-
-date = Item.new(Date.parse('2000-2-3'), archived: true)
-puts date.can_be_archived?
-puts date.move_to_archive
