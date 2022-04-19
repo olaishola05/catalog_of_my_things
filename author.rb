@@ -14,7 +14,6 @@ class Author
   end
 end
 
-author = Author.new('join', 'kim');
+author = Author.new('join', 'kim')
 
 puts author.id
-
