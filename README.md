@@ -4,7 +4,7 @@
 # Catalog of Things
 
 
-> An Object Oriented console based app for catalog of things with features to add new books, labels, games, music, genre, author, list of added items , persists records of all saved items. Built with Ruby.
+> An Object Oriented console based app that allows users to manage collections of the things they own with features to add new books, labels, games, music, genre, author, list of added items , persists records of all saved items into a JSON files following below diagram UML class diagram. Built with Ruby.
 
 Additional description about the project and its features.
 
@@ -15,6 +15,7 @@ Additional description about the project and its features.
 - Major language
   - Ruby
   - RSpec
+  - SQL
 
 - Technologies used
 
