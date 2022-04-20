@@ -39,6 +39,7 @@ class Main
       options(user_input)
     end
   end
+
 end
 
 Main.new.list_options

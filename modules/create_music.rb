@@ -26,5 +26,6 @@ module MusicAdd
     puts "archived #{is_archived}"
     @music.push(MusicAlbum.new(on_spotify, publish_date, is_archived))
     puts 'New album added!'
+		add_music
   end
 end

@@ -23,7 +23,7 @@ class App
     @labels = []
     @authors = []
     @games = []
-    @music = []
+    @music = read_music
     @genre = []
   end
 

@@ -13,3 +13,21 @@ def add_labels
   end
   file.puts(JSON.pretty_generate(labels))
 end
+
+def data_options
+  {
+      array_nl: "\n",
+      object_nl: "\n",
+      indent: '  ',
+      space_before: ' ',
+      space: ' '
+    }
+end
+
+def add_music
+  file = File.open('./store/music.json', 'w')
+  music = @music.map do |album|
+    {on_spotify: album.on_spotify, publish_date: album.publish_date, archived: album.archived}
+  end
+  file.puts(JSON.pretty_generate(music))
+end
