@@ -39,6 +39,7 @@ class Main
       menu
       user_input = input
       break if user_input == '7'
+
       options(user_input)
     end
   end
