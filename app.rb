@@ -14,12 +14,17 @@ class App
   include CreateBook
   include BookList
   include ListLabels
+  include MusicList
+  include GenreList
+  include MusicAdd
 
   def initialize
     @books = []
     @labels = []
     @authors = []
     @games = []
+    @music = []
+    @genre = []
   end
 
   def add_game
