@@ -4,12 +4,13 @@ require_relative './modules/list_labels'
 require 'json'
 require './data/data_read'
 require './data/data_write'
+require_relative 'game'
 
 class App
   attr_accessor :books, :labels, :games, :authors
 
   include CreateBook
-  include ListBooks
+  include BookList
   include ListLabels
 
   def initialize
