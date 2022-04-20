@@ -30,12 +30,12 @@ module MusicAdd
     add_music
   end
 
-	def add_new_genre
-		puts 'Add new genre'
-		puts 'Enter name: '
-		name = gets.chomp
-		@genre.push(Genre.new(name))
-		puts 'New genre created!'
-		add_genre
-	end
+  def add_new_genre
+    puts 'Add new genre'
+    puts 'Enter name: '
+    name = gets.chomp
+    @genre.push(Genre.new(name))
+    puts 'New genre created!'
+    add_genre
+  end
 end
