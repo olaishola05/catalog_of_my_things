@@ -1,6 +1,8 @@
 require_relative './modules/create_books'
 require_relative './modules/list_books'
 require_relative './modules/list_labels'
+require_relative './book'
+require_relative './label'
 require 'json'
 require './data/data_read'
 require './data/data_write'
@@ -15,7 +17,7 @@ class App
 
   def initialize
     @books = []
-    @label = []
+    @labels = []
     @authors = []
     @games = []
   end
@@ -51,5 +53,10 @@ class App
 
   def list_authors
     @authors.each { |author| puts "id: #{author.id} - #{author.first_name} #{author.last_name}" }
+  end
+
+  def read_files
+    @books = read_books
+    @labels = read_labels
   end
 end
