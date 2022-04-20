@@ -55,7 +55,7 @@ class App
     @authors.each { |author| puts "id: #{author.id} - #{author.first_name} #{author.last_name}" }
   end
 
-  def read_files 
+  def read_files
     @books = read_books
     @labels = read_labels
   end

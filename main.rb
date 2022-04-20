@@ -12,17 +12,10 @@ class Main
 
   def menu
     puts 'Welcome'
-    %W[
-      List\ all\ Books
-      List\ all\ Labels
-      Add\ new\ Book
-      Add\ new\ Label
-      Music
-      Genre
-      Game
-      Author
-      Exit
-    ].each_with_index { |option, index| puts "#{index + 1} - #{option}" }
+    ['List all Books', 'List all Labels', 'Add new Book', 'Add new Label', 'Music', 'Genre', 'Game', 'Author',
+     'Exit'].each_with_index do |option, index|
+      puts "#{index + 1} - #{option}"
+    end
   end
 
   def options(num)

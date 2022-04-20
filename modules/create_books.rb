@@ -1,5 +1,4 @@
 module CreateBook
-  
   def create_book(publish_date, publisher, cover_state)
     @books.push(Book.new(publish_date, publisher, cover_state))
   end
@@ -28,9 +27,6 @@ module CreateBook
     print 'Enter Color: '
     color = gets.chomp
     create_label(title, color) if item.nil?
-    # label = Label.new(title, color)
-    # label.add_one_label(item)
-    # @labels << label
     puts 'Label created successfully.'
     add_labels
   end
