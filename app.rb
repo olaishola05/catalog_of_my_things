@@ -32,7 +32,10 @@ class App
   end
 
   def list_games
-    @games.each { |game| puts "id: #{game.id} - game #{game.name} - published-date: #{game.published_date} - number of players #{game.multiplayer} - played at: #{game.last_played_at}" }
+    @games.each do |game|
+      puts "id: #{game.id} - game #{game.name} - published-date: #{game.published_date}
+- number of players #{game.multiplayer} - played at: #{game.last_played_at}"
+    end
   end
 
   def add_author
@@ -48,5 +51,4 @@ class App
   def list_authors
     @authors.each { |author| puts "id: #{author.id} - #{author.first_name} #{author.last_name}" }
   end
-
 end
