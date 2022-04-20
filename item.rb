@@ -14,8 +14,7 @@ class Item
   end
 
   def can_be_archived?
-    # Date.today.year - @publish_date.year > 10
-    true
+    Date.today.year - @publish_date.year > 10
   end
 
   def add_label(label)
