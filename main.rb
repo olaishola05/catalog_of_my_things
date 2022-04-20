@@ -24,7 +24,7 @@ class Main
     when '2' then puts @app.list_all_labels(@app.labels)
     when '3' then puts @app.add_book
     when '4' then puts @app.add_label
-    when '5' then puts '5 method'
+    when '5' then puts 
     when '6' then puts '6 method'
     end
   end
