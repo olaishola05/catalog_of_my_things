@@ -1,6 +1,9 @@
 require_relative './modules/create_books'
 require_relative './modules/list_books'
 require_relative './modules/list_labels'
+require_relative './modules/list_music'
+require_relative './modules/list_genre'
+require_relative './modules/create_music'
 require_relative './book'
 require_relative './label'
 require 'json'
@@ -23,7 +26,7 @@ class App
     @labels = []
     @authors = []
     @games = []
-    @music = read_music
+    @music = []
     @genre = []
   end
 
