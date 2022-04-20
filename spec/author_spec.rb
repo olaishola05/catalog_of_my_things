@@ -1,12 +1,12 @@
-require '../author'
-require '../game'
+require_relative '../author'
+require_relative '../game'
 
 describe Author do
   context 'before each test in the game class' do
     before(:each) do
       @author1 = Author.new('jones', 'jin')
       @author2 = Author.new('hill', 'kim', 45)
-      @game = Game.new('2001-02-03', true, 5, '2001-02-03')
+      @game = Game.new('2001-02-03', 5, '2001-02-03')
     end
     describe '#new' do
       it 'should take 3 or 2 parameters and returns an author object' do
