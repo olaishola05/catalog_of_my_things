@@ -1,4 +1,5 @@
 require_relative '../music'
+require_relative '../genre'
 
 module MusicAdd
   def choose(value)
@@ -28,4 +29,13 @@ module MusicAdd
     puts 'New album added!'
     add_music
   end
+
+	def add_new_genre
+		puts 'Add new genre'
+		puts 'Enter name: '
+		name = gets.chomp
+		@genre.push(Genre.new(name))
+		puts 'New genre created!'
+		add_genre
+	end
 end

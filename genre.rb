@@ -12,7 +12,3 @@ class Genre
     item.genre = self
   end
 end
-
-gen = Genre.new('R&B')
-puts gen
-puts gen.id

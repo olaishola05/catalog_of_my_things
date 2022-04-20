@@ -32,3 +32,14 @@ def read_music
   end
   data
 end
+
+def read_genre
+  file = './store/genre.json'
+  data = []
+  if File.exist?(file)
+    JSON.parse(File.read(file)).each do |album|
+      data.push(Genre.new(album.name))
+    end
+  end
+  data
+end

@@ -31,3 +31,11 @@ def add_music
   end
   file.puts(JSON.pretty_generate(music))
 end
+
+def add_genre
+  file = File.open('./store/genre.json', 'w')
+  genre = @genre.map do |album|
+    { name: album.name }
+  end
+  file.puts(JSON.pretty_generate(genre))
+end

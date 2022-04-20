@@ -11,8 +11,7 @@ class Main
   end
 
   def menu
-    puts 'Welcome'
-    ['List all Books', 'List all Labels', 'Add new Book', 'Add new Label', 'List all music', 'List all Genre', 'Create new music', 'Author',
+    ['List all Books', 'List all Labels', 'Add new Book', 'Add new Label', 'List all music', 'List all Genre', 'Create new music', 'Create new genre',
      'Exit'].each_with_index do |option, index|
       puts "#{index + 1} - #{option}"
     end
@@ -27,6 +26,7 @@ class Main
     when '5' then puts @app.list_all_music
     when '6' then puts @app.list_all_genre
     when '7' then puts @app.add_new_music
+    when '8' then puts @app.add_new_genre
     end
   end
 
@@ -35,7 +35,7 @@ class Main
     loop do
       menu
       user_input = input
-      break if user_input == '8'
+      break if user_input == '9'
 
       options(user_input)
     end
