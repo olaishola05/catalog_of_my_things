@@ -1,8 +1,8 @@
 class Genre
-	attr_accessor :name, :items
+  attr_accessor :name, :items
 
-	def initialize(name)
-		@name = name
-		@items = []
-	end
+  def initialize(name)
+    @name = name
+    @items = []
+  end
 end
