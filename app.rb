@@ -14,6 +14,7 @@ require 'json'
 require './data/data_read'
 require './data/data_write'
 require_relative 'game'
+require_relative 'author'
 
 class App
   attr_accessor :books, :labels, :games, :authors
