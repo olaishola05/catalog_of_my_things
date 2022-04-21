@@ -21,6 +21,11 @@ class Item
     @label = label
   end
 
+  def add_genre(genre)
+    @genre = genre
+    genre.items.push(self)
+  end
+
   def move_to_archive
     can_be_archived? ? @archived = true : puts('Item cannot be archived')
   end

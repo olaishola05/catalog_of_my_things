@@ -25,9 +25,12 @@ end
 def read_music
   file = './store/music.json'
   data = []
+  genres = read_genre
   if File.exist?(file)
     JSON.parse(File.read(file)).each do |album|
-      data.push(MusicAlbum.new(album['on_spotify'], album['publish_date'], album['archived']))
+      music = MusicAlbum.new(album['on_spotify'], album['publish_date'], album['archived'])
+      genres.each { |genre| music.add_genre = genre if genre == music['genre'] }
+      data.push(music)
     end
   end
   data
@@ -38,7 +41,7 @@ def read_genre
   data = []
   if File.exist?(file)
     JSON.parse(File.read(file)).each do |album|
-      data.push(Genre.new(album.name))
+      data.push(Genre.new(album['name']))
     end
   end
   data

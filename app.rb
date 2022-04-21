@@ -1,9 +1,7 @@
 require_relative './modules/create_books'
 require_relative './modules/list_books'
 require_relative './modules/list_labels'
-require_relative './modules/list_music'
-require_relative './modules/list_genre'
-require_relative './modules/create_music'
+require_relative './modules/music_operations'
 require_relative './book'
 require_relative './label'
 require 'json'
@@ -17,9 +15,7 @@ class App
   include CreateBook
   include BookList
   include ListLabels
-  include MusicList
-  include GenreList
-  include MusicAdd
+  include MusicOperations
 
   def initialize
     @books = []
@@ -66,6 +62,7 @@ class App
   def read_files
     @books = read_books
     @labels = read_labels
-    @music = read_music
+    #@music = read_music
+    @genre = read_genre
   end
 end

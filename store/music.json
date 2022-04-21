@@ -1,12 +1,10 @@
 [
   {
     "on_spotify": true,
-    "publish_date": "2020-0909",
-    "archived": false
-  },
-  {
-    "on_spotify": true,
     "publish_date": "2020-09-09",
-    "archived": false
+    "archived": false,
+    "music_id": 870,
+    "genre_id": 628,
+    "genre_name": "R&B"
   }
 ]

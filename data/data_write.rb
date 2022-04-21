@@ -27,7 +27,7 @@ end
 def add_music
   file = File.open('./store/music.json', 'w')
   music = @music.map do |album|
-    { on_spotify: album.on_spotify, publish_date: album.publish_date, archived: album.archived }
+    { on_spotify: album.on_spotify, publish_date: album.publish_date, archived: album.archived, music_id: album.id, genre_id: album.genre.id, genre_name: album.genre.name }
   end
   file.puts(JSON.pretty_generate(music))
 end
