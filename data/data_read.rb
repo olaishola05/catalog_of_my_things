@@ -21,3 +21,25 @@ def read_labels
     []
   end
 end
+
+def read_music
+  file = './store/music.json'
+  data = []
+  if File.exist?(file)
+    JSON.parse(File.read(file)).each do |album|
+      data.push(MusicAlbum.new(album['on_spotify'], album['publish_date'], album['archived']))
+    end
+  end
+  data
+end
+
+def read_genre
+  file = './store/genre.json'
+  data = []
+  if File.exist?(file)
+    JSON.parse(File.read(file)).each do |album|
+      data.push(Genre.new(album.name))
+    end
+  end
+  data
+end

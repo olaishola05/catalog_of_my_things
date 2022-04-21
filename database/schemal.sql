@@ -51,3 +51,17 @@ CREATE TABLE games (
     CONSTRAINT fk_label FOREIGN KEY(label_id) REFERENCES labels(id),
 );
 
+CREATE TABLE music (
+    id INT GENERATED ALWAYS AS IDENTITY,
+    name VARCHAR(100) NOT NULL,
+    publish_date DATE NOT NULL,
+    archived BOOLEAN
+    on_spotify BOOLEAN NOT NULL,
+    genre_id INT,
+    FOREIGN KEY (genre_id) REFERENCES genres(id)
+);
+
+CREATE TABLE genre (
+    id INT GENERATED ALWAYS AS IDENTITY,
+    name VARCHAR(100) NOT NULL
+);

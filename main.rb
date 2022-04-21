@@ -1,4 +1,5 @@
 require_relative 'app'
+require_relative 'menu'
 
 class Main
   def initialize
@@ -11,21 +12,9 @@ class Main
   end
 
   def menu
-    puts 'Welcome'
-    ['List all Books', 'List all Labels', 'Add new Book', 'Add new Label', 'Music', 'Genre', 'Game', 'Author',
+    ['List all Books', 'List all Labels', 'Add new Book', 'Add new Label', 'List all music', 'List all Genre', 'Create new music', 'Create new genre',
      'Exit'].each_with_index do |option, index|
       puts "#{index + 1} - #{option}"
-    end
-  end
-
-  def options(num)
-    case num
-    when '1' then puts @app.list_all_books(@app.books)
-    when '2' then puts @app.list_all_labels(@app.labels)
-    when '3' then puts @app.add_book
-    when '4' then puts @app.add_label
-    when '5' then puts '5 method'
-    when '6' then puts '6 method'
     end
   end
 
@@ -34,7 +23,7 @@ class Main
     loop do
       menu
       user_input = input
-      break if user_input == '7'
+      break if user_input == '9'
 
       options(user_input)
     end
