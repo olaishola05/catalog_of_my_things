@@ -15,11 +15,19 @@ def read_labels
     file = File.read('./store/label.json')
     labels = JSON.parse(file)
     labels.map do |label|
-      Label.new(label['title'], label['color'])
+      # Label.new(label['title'], label['color'])
+      n_label = add_label(label)
+      @labels.push(n_label)
     end
   else
     []
   end
+end
+
+def add_label(label)
+  new_label = Label.new(label['title'], label['color'])
+  new_label.id = label['id'].to_i
+  new_label
 end
 
 def read_music
