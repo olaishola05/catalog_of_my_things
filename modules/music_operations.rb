@@ -10,6 +10,7 @@ module MusicOperations
       false
     else
       puts 'Please pick a value "Y" or "N".'
+      false
     end
   end
 
@@ -48,7 +49,7 @@ module MusicOperations
     puts 'No music album added yet.' if @music.empty?
     puts
     @music.each_with_index do |album, index|
-      puts "#{index} [Id: #{album.id}, Spotify: #{album.on_spotify}, Date: #{album.publish_date}], Genre: #{album.genre.name}"
+      puts "#{index} [Id: #{album.id}, Spotify: #{album.on_spotify}, Date: #{album.publish_date}]"
     end
     puts
   end

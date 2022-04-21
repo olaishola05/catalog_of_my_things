@@ -62,7 +62,7 @@ class App
   def read_files
     @books = read_books
     @labels = read_labels
-    #@music = read_music
+    @music = read_music
     @genre = read_genre
   end
 end
