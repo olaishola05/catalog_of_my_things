@@ -1,5 +1,4 @@
 module CreateAuthor
-
   def add_author
     puts 'add author'
     puts 'Enter first name'
