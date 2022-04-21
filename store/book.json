@@ -43,5 +43,15 @@
     "publish_date": "2222-02-03",
     "publisher": "Aliens",
     "cover_state": "Alienware"
+  },
+  {
+    "publish_date": "2026-20-01",
+    "publisher": "The Goons",
+    "cover_state": "Great"
+  },
+  {
+    "publish_date": "202020000",
+    "publisher": "Dante",
+    "cover_state": "Good"
   }
 ]

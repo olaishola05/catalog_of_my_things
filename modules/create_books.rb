@@ -19,15 +19,16 @@ module CreateBook
     create_book(publish_date, publisher, cover_state)
     puts 'Book created successfully.'
     add_books
-
-    add_label_to_book
-  end
-
-  def add_label_to_book
+    
     print 'Create new label: (y), or use already created label: (n) [Y/N] '
     get_option = gets.chomp.downcase == 'y'
 
-    if get_option
+    add_label_to_book(get_option)
+  end
+
+  def add_label_to_book(option)
+
+    if option
       add_label(@books.last)
     elsif @labels.length.zero?
       puts 'No labels created yet. Please create a label first.'
