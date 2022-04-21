@@ -9,10 +9,10 @@ def options(num)
   when '6' then @app.list_all_genre
   when '7' then @app.add_new_music
   when '8' then @app.add_new_genre
-  when '9' then @app.list_authors
-  when '11' then @app.add_author
-  when '12' then @app.list_all_game
-  when '13' then @app.add_game
+  when '9' then @app.list_authors(@app.authors)
+  when '10' then @app.add_author
+  when '11' then @app.list_all_game(@app.games)
+  when '12' then @app.add_game
   end
 end
 # rubocop:enable Metrics/CyclomaticComplexity

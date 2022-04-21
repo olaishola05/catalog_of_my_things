@@ -25,7 +25,7 @@ class Main
     loop do
       menu
       user_input = input
-      break if user_input == '14'
+      break if user_input == '13'
 
       options(user_input)
     end

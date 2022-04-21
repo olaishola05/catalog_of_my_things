@@ -43,7 +43,7 @@ end
 def save_game
   games = []
   @games.each do |game|
-    games.push({ publish_date: game.publish_date, _archived: game._archived, multiplayer: game.multiplayer,
+    games.push({ publish_date: game.publish_date, multiplayer: game.multiplayer,
                  last_played_at: game.last_played_at })
   end
 
