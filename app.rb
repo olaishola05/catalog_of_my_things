@@ -4,6 +4,10 @@ require_relative './modules/list_labels'
 require_relative './modules/list_music'
 require_relative './modules/list_genre'
 require_relative './modules/create_music'
+require_relative './modules/create_author'
+require_relative './modules/create_game'
+require_relative './modules/list_authors'
+require_relative './modules/list_games'
 require_relative './book'
 require_relative './label'
 require 'json'
@@ -20,6 +24,10 @@ class App
   include MusicList
   include GenreList
   include MusicAdd
+  include ListAuthors
+  include CreateGame
+  include ListGame
+  include CreateAuthor
 
   def initialize
     @books = []
@@ -30,42 +38,11 @@ class App
     @genre = []
   end
 
-  def add_game
-    puts 'Add game'
-    puts 'Enter publish date "2003-02-11"'
-    published_date = gets.chomp.to_s
-    puts 'Enter number of player'
-    multiplayer = gets.chomp.to_i
-    puts 'Last played at date'
-    last_played_at = gets.chomp.to_s
-    game = Game.new(published_date, multiplayer, last_played_at)
-    @games.push(game)
-  end
-
-  def list_games
-    @games.each do |game|
-      puts "id: #{game.id} - game #{game.name} - published-date: #{game.published_date}
-- number of players #{game.multiplayer} - played at: #{game.last_played_at}"
-    end
-  end
-
-  def add_author
-    puts 'add author'
-    puts 'Enter first name'
-    first_name = gets.chomp.to_s
-    puts 'enter last name'
-    last_name = gets.chomp.to_s
-    author = Author.new(first_name, last_name)
-    @authors.push(author)
-  end
-
-  def list_authors
-    @authors.each { |author| puts "id: #{author.id} - #{author.first_name} #{author.last_name}" }
-  end
-
   def read_files
     @books = read_books
     @labels = read_labels
     @music = read_music
+    @authors = read_authors
+    @games = read_games
   end
 end
