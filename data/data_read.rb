@@ -16,8 +16,8 @@ def read_labels
     labels = JSON.parse(file)
     labels.map do |label|
       Label.new(label['title'], label['color'])
-      # n_label = add_label(label)
-      # @labels.push(n_label)
+      n_label = add_label(label)
+      @labels.push(n_label)
     end
   else
     []

@@ -1,28 +1,20 @@
 def add_books
-  file = File.open('./store/book.json', 'w')
-  books = @books.map do |book|
-    { publish_date: book.publish_date, publisher: book.publisher, cover_state: book.cover_state }
-  end
-  file.puts(JSON.pretty_generate(books))
+  File.write('./store/books.json', @books.to_json)
 end
 
 def add_labels
-  file = File.open('./store/label.json', 'w')
-  labels = @labels.map do |label|
-    { title: label.title, color: label.color }
-  end
-  file.puts(JSON.pretty_generate(labels))
+  File.write('./store/labels.json', @labels.to_json)
 end
 
-def data_options
-  {
-    array_nl: "\n",
-    object_nl: "\n",
-    indent: '  ',
-    space_before: ' ',
-    space: ' '
-  }
-end
+# def data_options
+#   {
+#     array_nl: "\n",
+#     object_nl: "\n",
+#     indent: '  ',
+#     space_before: ' ',
+#     space: ' '
+#   }
+# end
 
 def add_music
   file = File.open('./store/music.json', 'w')
