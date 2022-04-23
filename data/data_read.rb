@@ -5,6 +5,7 @@ def read_books
       Book.new(book['publish_date'], book['publisher'], book['cover_state'])
     end
   else
+    puts 'No book available'
     []
   end
 end
@@ -18,6 +19,7 @@ def read_labels
       @labels.push(n_label)
     end
   else
+    puts 'No label available'
     []
   end
 end
