@@ -6,15 +6,6 @@ def add_labels
   File.write('./store/labels.json', @labels.to_json)
 end
 
-# def data_options
-#   {
-#     array_nl: "\n",
-#     object_nl: "\n",
-#     indent: '  ',
-#     space_before: ' ',
-#     space: ' '
-#   }
-# end
 
 def add_music
   file = File.open('./store/music.json', 'w')

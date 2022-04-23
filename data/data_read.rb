@@ -1,7 +1,6 @@
 def read_books
   if File.exist?('./store/book.json')
-    file = File.read('./store/book.json')
-    books = JSON.parse(file)
+    books = JSON.parse(File.read('./store/book.json'))
     books.map do |book|
       Book.new(book['publish_date'], book['publisher'], book['cover_state'])
     end
@@ -12,8 +11,7 @@ end
 
 def read_labels
   if File.exist?('./store/label.json')
-    file = File.read('./store/label.json')
-    labels = JSON.parse(file)
+    labels = JSON.parse(File.read('./store/label.json'))
     labels.map do |label|
       Label.new(label['title'], label['color'])
       n_label = add_label(label)
